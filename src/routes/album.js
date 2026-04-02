@@ -1,20 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const { getToken } = require('../token-manager');
+const { respond, respondError } = require('../response');
 
 router.get('/:id', async (req, res) => {
   try {
     const token = await getToken();
-    if (!token) return res.status(503).json({ success: false, error: 'Spotify token unavailable' });
-
+    if (!token) return respondError(res, 503, 'Spotify token unavailable, please try again shortly');
     const result = await fetch(`https://api.spotify.com/v1/albums/${req.params.id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
-    if (!result.ok) throw new Error(`Spotify API: ${result.status}`);
-    const data = await result.json();
-    res.json({ success: true, provider: 'CASPER TECH', ...data });
+    if (!result.ok) throw new Error(`Spotify API returned ${result.status}`);
+    respond(res, 200, await result.json());
   } catch (err) {
-    res.status(500).json({ success: false, error: err.message });
+    respondError(res, 500, err.message);
   }
 });
 
