@@ -14,6 +14,10 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "node-cron": "^3.0.3"
+    "node-cron": "^3.0.3",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^5.4.1"
   }
 }
