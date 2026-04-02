@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sportify API — CASPER TECH</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #1db954;
+      --green-dark: #158a3e;
+      --bg: #0a0a0a;
+      --surface: #111;
+      --surface2: #1a1a1a;
+      --border: #222;
+      --text: #e8e8e8;
+      --muted: #666;
+      --radius: 12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo { display: flex; align-items: center; gap: 14px; }
+    .logo-icon {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .logo-text h1 { font-size: 1.3rem; font-weight: 700; color: #fff; }
+    .logo-text p { font-size: 0.78rem; color: var(--muted); }
+
+    .badge {
+      background: var(--green);
+      color: #000;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px 50px;
+      background: radial-gradient(ellipse at 50% 0%, #1db95422 0%, transparent 70%);
+    }
+    .hero h2 { font-size: 2.4rem; font-weight: 800; color: #fff; margin-bottom: 14px; }
+    .hero h2 span { color: var(--green); }
+    .hero p { font-size: 1.05rem; color: var(--muted); max-width: 540px; margin: 0 auto 32px; }
+
+    .pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .pill {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .pill span { color: var(--green); font-weight: 600; }
+
+    main { max-width: 960px; margin: 0 auto; padding: 20px 20px 60px; }
+
+    .section-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 16px;
+      margin-top: 48px;
+    }
+
+    .try-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .input-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .input-row input, .input-row select {
+      flex: 1;
+      min-width: 160px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--text);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .input-row input:focus, .input-row select:focus { border-color: var(--green); }
+    .input-row select option { background: #111; }
+
+    button {
+      background: var(--green);
+      color: #000;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    button:hover { background: var(--green-dark); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .result-box {
+      margin-top: 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.8rem;
+      color: #aef1a0;
+      white-space: pre-wrap;
+      word-break: break-all;
+      max-height: 360px;
+      overflow-y: auto;
+      display: none;
+    }
+    .result-box.visible { display: block; }
+    .result-box.error { color: #f87171; }
+
+    .endpoint-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .endpoint-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.1s;
+    }
+    .endpoint-card:hover { border-color: var(--green); transform: translateY(-1px); }
+
+    .ep-method {
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: #1db95420;
+      color: var(--green);
+      border-radius: 4px;
+      padding: 2px 8px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .ep-path { font-family: monospace; font-size: 0.85rem; color: #fff; margin-bottom: 4px; }
+    .ep-desc { font-size: 0.78rem; color: var(--muted); }
+
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    .footer a { color: var(--green); text-decoration: none; }
+
+    .loader { display: inline-block; width: 14px; height: 14px; border: 2px solid #000; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; margin-right: 6px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🎵</div>
+    <div class="logo-text">
+      <h1>Sportify API</h1>
+      <p>by CASPER TECH · TRABY CASPER</p>
+    </div>
+  </div>
+  <span class="badge">FREE &amp; UNLIMITED</span>
+</header>
+
+<div class="hero">
+  <h2>Spotify Data.<br><span>No Keys. No Limits.</span></h2>
+  <p>Access Spotify's full catalogue — search, tracks, albums, playlists and artists — completely free with zero setup.</p>
+  <div class="pills">
+    <div class="pill"><span>✓</span> No API Key</div>
+    <div class="pill"><span>✓</span> No Sign Up</div>
+    <div class="pill"><span>✓</span> No Rate Limit</div>
+    <div class="pill"><span>✓</span> Pretty JSON</div>
+    <div class="pill"><span>✓</span> CORS Enabled</div>
+  </div>
+</div>
+
+<main>
+
+  <p class="section-title">Try It Live</p>
+  <div class="try-box">
+    <div class="input-row">
+      <input id="searchQ" type="text" placeholder="Search query e.g. Faded" value="Faded" />
+      <select id="searchType">
+        <option value="track">Track</option>
+        <option value="album">Album</option>
+        <option value="artist">Artist</option>
+        <option value="playlist">Playlist</option>
+      </select>
+      <input id="searchLimit" type="number" placeholder="Limit" value="3" min="1" max="50" style="max-width:90px;" />
+      <button id="searchBtn" onclick="runSearch()">Search</button>
+    </div>
+    <pre id="searchResult" class="result-box"></pre>
+  </div>
+
+  <p class="section-title">Endpoints</p>
+  <div class="endpoint-grid">
+    <div class="endpoint-card" onclick="quickCall('/api/token')">
+      <div class="ep-method">GET</div>
+      <div class="ep-path">/api/token</div>
+      <div class="ep-desc">Get current anonymous Spotify access token</div>
+    </div>
+    <div class="endpoint-card" onclick="quickCall('/api/health')">
+      <div class="ep-method">GET</div>
+      <div class="ep-path">/api/health</div>
+      <div class="ep-desc">Check API health and uptime</div>
+    </div>
+    <div class="endpoint-card" onclick="prompt('Copy this URL:', location.origin+'/api/search?q=Faded&type=track&limit=5')">
+      <div class="ep-method">GET</div>
+      <div class="ep-path">/api/search</div>
+      <div class="ep-desc">Search tracks, albums, artists, playlists · ?q= &type= &limit=</div>
+    </div>
+    <div class="endpoint-card" onclick="prompt('Copy this URL:', location.origin+'/api/track/3n3Ppam7vgaVa1iaRUIOKE')">
+      <div class="ep-method">GET</div>
+      <div class="ep-path">/api/track/:id</div>
+      <div class="ep-desc">Get full track details by Spotify ID</div>
+    </div>
+    <div class="endpoint-card" onclick="prompt('Copy this URL:', location.origin+'/api/album/1weenld61qoidwYuZ1GESA')">
+      <div class="ep-method">GET</div>
+      <div class="ep-path">/api/album/:id</div>
+      <div class="ep-desc">Get album details and track listing</div>
+    </div>
+    <div class="endpoint-card" onclick="prompt('Copy this URL:', location.origin+'/api/playlist/37i9dQZEVXbMDoHDwVN2tF')">
+      <div class="ep-method">GET</div>
+      <div class="ep-path">/api/playlist/:id</div>
+      <div class="ep-desc">Get playlist info and tracks</div>
+    </div>
+    <div class="endpoint-card" onclick="prompt('Copy this URL:', location.origin+'/api/artist/3TVXtAsR1Inumwj472S9r4')">
+      <div class="ep-method">GET</div>
+      <div class="ep-path">/api/artist/:id</div>
+      <div class="ep-desc">Get artist profile and metadata</div>
+    </div>
+    <div class="endpoint-card" onclick="prompt('Copy this URL:', location.origin+'/api/artist/3TVXtAsR1Inumwj472S9r4/top-tracks?market=US')">
+      <div class="ep-method">GET</div>
+      <div class="ep-path">/api/artist/:id/top-tracks</div>
+      <div class="ep-desc">Get artist top tracks · ?market=US</div>
+    </div>
+  </div>
+
+  <p class="section-title">Quick Response Preview</p>
+  <div class="try-box">
+    <button onclick="quickCall('/api')" style="margin-bottom:0;">Load API Info</button>
+    <pre id="quickResult" class="result-box"></pre>
+  </div>
+
+</main>
+
+<footer class="footer">
+  Powered by <strong>CASPER TECH</strong> · Built by <strong>TRABY CASPER</strong><br>
+  Free, anonymous, unlimited Spotify API — no credentials required.
+</footer>
+
+<script>
+  async function runSearch() {
+    const q = document.getElementById('searchQ').value.trim();
+    const type = document.getElementById('searchType').value;
+    const limit = document.getElementById('searchLimit').value || 3;
+    const btn = document.getElementById('searchBtn');
+    const box = document.getElementById('searchResult');
+    if (!q) return;
+    btn.disabled = true;
+    btn.innerHTML = '<span class="loader"></span>Searching...';
+    box.className = 'result-box visible';
+    box.textContent = 'Loading...';
+    try {
+      const res = await fetch(`/api/search?q=${encodeURIComponent(q)}&type=${type}&limit=${limit}`);
+      const data = await res.json();
+      box.className = res.ok ? 'result-box visible' : 'result-box visible error';
+      box.textContent = JSON.stringify(data, null, 2);
+    } catch (e) {
+      box.className = 'result-box visible error';
+      box.textContent = 'Request failed: ' + e.message;
+    }
+    btn.disabled = false;
+    btn.textContent = 'Search';
+  }
+
+  async function quickCall(path) {
+    const box = document.getElementById('quickResult');
+    box.className = 'result-box visible';
+    box.textContent = 'Loading...';
+    try {
+      const res = await fetch(path);
+      const data = await res.json();
+      box.className = res.ok ? 'result-box visible' : 'result-box visible error';
+      box.textContent = JSON.stringify(data, null, 2);
+    } catch (e) {
+      box.className = 'result-box visible error';
+      box.textContent = 'Request failed: ' + e.message;
+    }
+  }
+
+  document.getElementById('searchQ').addEventListener('keydown', e => {
+    if (e.key === 'Enter') runSearch();
+  });
+</script>
+</body>
+</html>
