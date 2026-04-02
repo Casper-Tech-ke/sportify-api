@@ -1,8 +1,36 @@
 # Sportify API
 
-**Free, unlimited Spotify search API — no API keys, no sign-ups, no rate limits.**
+> **Free, unlimited Spotify search API. No API key required.**
 
-Built and maintained by **CASPER TECH** · **TRABY CASPER**
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Live-brightgreen)](https://sportify.xcasper.space)
+[![Built by](https://img.shields.io/badge/Built%20by-TRABY%20CASPER-7c3aed)](https://xcasper.space)
+[![CASPER TECH](https://img.shields.io/badge/CASPER%20TECH-Open%20API-a855f7)](https://xcasper.space)
+
+**Live:** [https://sportify.xcasper.space](https://sportify.xcasper.space)
+
+---
+
+## What Is This?
+
+Sportify API is a free public REST API that gives developers instant access to Spotify's full music catalogue — tracks, albums, artists, playlists and more — without needing a Spotify developer account, API key, or OAuth flow.
+
+Built and maintained by **TRABY CASPER** under the **CASPER TECH** umbrella.
+
+---
+
+## Owner & Author
+
+| | |
+|---|---|
+| **Name** | TRABY CASPER |
+| **Organisation** | CASPER TECH |
+| **Country** | Kenya 🇰🇪 |
+| **Website** | [xcasper.space](https://xcasper.space) |
+| **GitHub** | [@Casper-Tech-ke](https://github.com/Casper-Tech-ke) |
+| **Role** | Founder & Lead Developer |
+
+CASPER TECH is a Kenyan tech initiative focused on building free, accessible developer tools and APIs for African and global developers. Sportify API is part of the CASPER TECH API Hub platform — home to 150+ free API endpoints.
 
 ---
 
@@ -10,23 +38,51 @@ Built and maintained by **CASPER TECH** · **TRABY CASPER**
 
 | Method | Path | Description |
 |--------|------|-------------|
-| GET | `/api` | API info and endpoint list |
-| GET | `/api/health` | Health check |
-| GET | `/api/token` | Get a live Spotify access token |
-| GET | `/api/search?q=QUERY&type=track&limit=10` | Search Spotify |
-| GET | `/api/track/:id` | Track details |
-| GET | `/api/album/:id` | Album details |
-| GET | `/api/playlist/:id` | Playlist details |
-| GET | `/api/artist/:id` | Artist profile |
-| GET | `/api/artist/:id/top-tracks?market=US` | Artist top tracks |
+| GET | `/api/health` | API health check and uptime |
+| GET | `/api/token` | Get current Spotify access token |
+| GET | `/api/search` | Search tracks, albums, artists, playlists |
+| GET | `/api/track/:id` | Track details by Spotify ID |
+| GET | `/api/album/:id` | Album details and track listing |
+| GET | `/api/playlist/:id` | Playlist info and all tracks |
+| GET | `/api/artist/:id` | Artist profile and metadata |
+| GET | `/api/artist/:id/top-tracks` | Artist top tracks by market |
 
-**Search types:** `track`, `album`, `artist`, `playlist`, `episode`, `show`
+---
+
+## Quick Start
+
+No setup needed. Hit the API directly:
+
+```bash
+# Search for a track
+curl "https://sportify.xcasper.space/api/search?q=Faded&type=track&limit=5"
+
+# Get a track by ID
+curl "https://sportify.xcasper.space/api/track/3n3Ppam7vgaVa1iaRUIOKE"
+
+# Get Drake's top tracks in Kenya
+curl "https://sportify.xcasper.space/api/artist/3TVXtAsR1Inumwj472S9r4/top-tracks?market=KE"
+
+# Get current access token
+curl "https://sportify.xcasper.space/api/token"
+```
+
+---
+
+## Search Parameters
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `q` | string | Yes | Search query |
+| `type` | string | Yes | `track`, `album`, `artist`, `playlist`, `episode`, `show` |
+| `limit` | number | No | Results count. Default 10, max 50 |
+| `offset` | number | No | Pagination offset. Default 0 |
 
 ---
 
 ## Response Format
 
-Every response is pretty-printed JSON:
+All responses follow this standard structure:
 
 ```json
 {
@@ -37,165 +93,84 @@ Every response is pretty-printed JSON:
 }
 ```
 
----
-
-## Using the Token Endpoint
-
-If you only need a Spotify access token to use directly with Spotify's API:
-
-### 1. Get a token
-
-```bash
-curl https://your-deployment-url/api/token
-```
-
-Response:
+Error responses:
 
 ```json
 {
   "provider": "CASPER TECH",
   "creator": "TRABY CASPER",
-  "success": true,
-  "note": "Anonymous Spotify web-player token. Valid for ~1 hour.",
-  "access_token": "BQD...",
-  "token_type": "Bearer"
+  "success": false,
+  "error": "Description of the error"
 }
 ```
 
-### 2. Use the token with Spotify's API directly
+---
 
-Copy the `access_token` value and use it as a `Bearer` token in any Spotify API request:
+## Token Info
 
-**Search for a track:**
+The `/api/token` endpoint returns an anonymous Spotify web-player token. These tokens:
+- Are valid for ~1 hour
+- Are automatically refreshed every 30 minutes in the background
+- Require no user authentication
+- Can be used directly with Spotify's public API
+
+### Using the token directly with Spotify
+
 ```bash
 curl -H "Authorization: Bearer BQD..." \
   "https://api.spotify.com/v1/search?q=Faded&type=track&limit=5"
 ```
 
-**Get a track by ID:**
-```bash
-curl -H "Authorization: Bearer BQD..." \
-  "https://api.spotify.com/v1/tracks/3n3Ppam7vgaVa1iaRUIOKE"
-```
-
-**Get an album:**
-```bash
-curl -H "Authorization: Bearer BQD..." \
-  "https://api.spotify.com/v1/albums/1weenld61qoidwYuZ1GESA"
-```
-
-**Get a playlist:**
-```bash
-curl -H "Authorization: Bearer BQD..." \
-  "https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF"
-```
-
-**Get an artist:**
-```bash
-curl -H "Authorization: Bearer BQD..." \
-  "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4"
-```
-
-The token is valid for approximately **1 hour**. Fetch a new one from `/api/token` when it expires.
-
 ---
 
-## Deploy
+## Self-Hosting
+
+### Requirements
+- Node.js 18+
+- npm 8+
 
 ### Environment Variables
 
-```env
-PORT=3001
-REFRESH_INTERVAL_MINUTES=30
-```
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `PORT` | `3001` | Port to listen on |
+| `REFRESH_INTERVAL_MINUTES` | `30` | Token refresh interval |
 
----
-
-### Render
-
-1. Push this repo to GitHub
-2. Go to [render.com](https://render.com) → **New → Web Service**
-3. Connect your repo
-4. Set:
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-5. Add `PORT` and `REFRESH_INTERVAL_MINUTES` under the **Environment** tab
-6. Deploy
-
----
-
-### Heroku
+### Run Locally
 
 ```bash
-heroku create sportify-api
-git push heroku main
-```
-
-Or via Dashboard:
-1. New → Create new app
-2. Connect GitHub repo → Enable auto deploy
-3. Heroku sets `PORT` automatically
-
----
-
-### Fly.io
-
-```bash
-npm install -g flyctl
-fly auth login
-fly launch --name sportify-api
-fly deploy
-```
-
-`fly launch` auto-detects Node.js. `PORT` is set automatically by Fly.
-
----
-
-### VPS (Ubuntu / Debian)
-
-```bash
-# 1. Install Node.js 18+
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install -y nodejs
-
-# 2. Clone and install
 git clone https://github.com/Casper-Tech-ke/sportify-api.git
 cd sportify-api
 npm install
-cp .env.example .env
-nano .env
-
-# 3. Run with PM2
-npm install -g pm2
-pm2 start src/index.js --name sportify-api
-pm2 startup && pm2 save
+npm start
 ```
 
-**Nginx reverse proxy:**
+### Deploy with PM2
+
+```bash
+pm2 start src/index.js --name sportify-api
+pm2 save
+```
+
+### Nginx Reverse Proxy
 
 ```nginx
 server {
-    listen 80;
+    listen 443 ssl;
     server_name yourdomain.com;
+
+    ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+
     location / {
         proxy_pass http://127.0.0.1:3001;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
 ```
-
----
-
-### Railway
-
-1. Go to [railway.app](https://railway.app) → **New Project → Deploy from GitHub**
-2. Select your repo
-3. Railway auto-detects Node.js and sets `PORT`
-4. Deploy
-
----
 
 ### Docker
 
@@ -216,8 +191,50 @@ docker run -p 3001:3001 sportify-api
 
 ---
 
+## Project Structure
+
+```
+sportify-api/
+├── src/
+│   ├── index.js          — Express server entry point
+│   ├── totp.js           — Spotify TOTP token generation
+│   ├── token-manager.js  — Token cache and scheduler
+│   └── response.js       — Response helpers
+├── public/
+│   ├── index.html        — Interactive API documentation
+│   ├── terms.html        — Terms & Conditions
+│   ├── disclaimer.html   — Disclaimer
+│   ├── favicon.svg       — Site favicon
+│   └── og.png            — Social media preview image
+├── scripts/
+│   └── refresh.js        — Manual token refresh
+├── CONTRIBUTING.md
+├── DISCLAIMER.md
+├── LICENSE
+├── SECURITY.md
+└── README.md
+```
+
+---
+
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request.
+
+## Security
+
+Found a vulnerability? Please read our [Security Policy](SECURITY.md) for responsible disclosure guidelines.
+
+## Disclaimer
+
+This is an independent project not affiliated with Spotify AB. Read the full [DISCLAIMER.md](DISCLAIMER.md).
+
 ## License
 
-MIT — free to use, modify and deploy.
+[MIT](LICENSE) © 2025 TRABY CASPER · CASPER TECH
 
-**CASPER TECH** · Built by TRABY CASPER
+---
+
+<div align="center">
+  <strong>Built with passion in Kenya 🇰🇪 by <a href="https://xcasper.space">TRABY CASPER</a> · CASPER TECH</strong>
+</div>
