@@ -1,1 +1,157 @@
-function _0x273240(_0x43fa83,_0x314c58){const _0x54e0b1={_0x3a97e2:0xef};return _0x55fd(_0x314c58-_0x54e0b1._0x3a97e2,_0x43fa83);}function _0xd91c(){const _0x3ffe98=['A2vUihvUyxzHAq','svLmtNO','u3bVDgLMEsb0BW','CZ9TyxjRzxq9','C3rHDhvZ','As5ZCg90Awz5lG','r2PKq0m','DKjPwMS','yxnLihrYEsbHzW','z2v0','n3PAzKTKwq','mZi1mJi2vuLgAhfV','ndeWmZjqt0nxzum','u3bVDgLMEsbbua','l3rVCc10CMfJAW','mJblqxPYBxq','BwfYA2v0','nZGYmMfdC29NCW','oty1nZy2DNvZCMrN','ssbYzxr1CM5Lza','nte5nJuYmhzKueLzBW','mtu2mJmYnJDftNbjwxa','Ahr0Chm6lY9HCa','y29Tl3yXl2fYDa','uM91DgvY','CxvLCNK','mZCYmdq0ENzitfr4','BwvZC2fNzq','CgfYyw1Z','yw5Hz2vY','ywLUihnOB3j0Ba','zxHWCMvZCW','mtGZAezov1r0','Axn0CY8','ANnVBG','CMfJA3m','lZPPzc90B3aTDa','odq2zefAyNLw','lI4VCMvZCg9UCW','qMvHCMvYia'];_0xd91c=function(){return _0x3ffe98;};return _0xd91c();}function _0x55fd(_0x502923,_0x58c1b5){_0x502923=_0x502923-(0x1b8b+0x13d*-0x4+-0x22*0xa1);const _0x2c6116=_0xd91c();let _0x4a9137=_0x2c6116[_0x502923];if(_0x55fd['DmOmGZ']===undefined){var _0x1814b7=function(_0x188d94){const _0x528dfb='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x4c74f9='',_0x51e4f2='';for(let _0x145651=-0xc85+0x1*0x194f+-0xcca,_0x29ec6f,_0x2dd839,_0x32b92b=0x1462+-0x2fc*-0xb+-0x3536;_0x2dd839=_0x188d94['charAt'](_0x32b92b++);~_0x2dd839&&(_0x29ec6f=_0x145651%(-0x1*-0x20d1+-0xbcb*0x3+-0x2c*-0xf)?_0x29ec6f*(0xf44+-0x1d*-0x6+-0xfb2)+_0x2dd839:_0x2dd839,_0x145651++%(0x2311+0xd79*0x1+-0x3086))?_0x4c74f9+=String['fromCharCode'](0x6d1*-0x3+0x7*-0x5d+0x17fd&_0x29ec6f>>(-(0x168f+-0x1a5+-0x14e8)*_0x145651&0x1284+0x25*0xef+0x1*-0x3509)):-0xb*-0x1de+-0x1*0x9b+-0x15*0xf3){_0x2dd839=_0x528dfb['indexOf'](_0x2dd839);}for(let _0x318f13=-0x1*-0x180b+0x268c+-0x3e97,_0x46c5b2=_0x4c74f9['length'];_0x318f13<_0x46c5b2;_0x318f13++){_0x51e4f2+='%'+('00'+_0x4c74f9['charCodeAt'](_0x318f13)['toString'](0x95f+0x1*-0x183f+0xef0))['slice'](-(-0x1329+0x31*-0x23+0x3b2*0x7));}return decodeURIComponent(_0x51e4f2);};_0x55fd['xkngUk']=_0x1814b7,_0x55fd['GdEqiC']={},_0x55fd['DmOmGZ']=!![];}const _0x47e4c4=_0x2c6116[0x3*0x91+0x12bb+-0x146e],_0x1e7958=_0x502923+_0x47e4c4,_0x127fbf=_0x55fd['GdEqiC'][_0x1e7958];return!_0x127fbf?(_0x4a9137=_0x55fd['xkngUk'](_0x4a9137),_0x55fd['GdEqiC'][_0x1e7958]=_0x4a9137):_0x4a9137=_0x127fbf,_0x4a9137;}(function(_0x1abfa9,_0x283ddc){const _0x31f703={_0x2b018d:0xf3,_0x110b28:0xf0,_0x32a9a1:0x100,_0x54d8a5:0x20,_0x3ba938:0x117,_0x1c9e86:0x10d,_0x1f9063:0x25,_0x2abccd:0x20};function _0x5114f6(_0x632ec2,_0x2060b5){return _0x55fd(_0x632ec2- -0x179,_0x2060b5);}const _0x1cb299=_0x1abfa9();function _0xf73d49(_0x4bebef,_0x387f7d){return _0x55fd(_0x387f7d- -0x249,_0x4bebef);}while(!![]){try{const _0x1d9431=parseInt(_0x5114f6(-0x2f,-0x1f))/(0xaee+0x2113+-0x2c00)+parseInt(_0xf73d49(-_0x31f703._0x2b018d,-0xf9))/(-0x7a2+-0x569+0xd0d)*(-parseInt(_0xf73d49(-0x106,-0x112))/(0x24b*-0x4+0x16b4+0xd85*-0x1))+-parseInt(_0xf73d49(-0xe7,-_0x31f703._0x110b28))/(-0x2230+-0xce*-0x2f+-0x1cf*0x2)*(parseInt(_0xf73d49(-0x108,-0xfb))/(0x1d16+0x1*0x1d3a+0x3a4b*-0x1))+-parseInt(_0xf73d49(-0xe8,-0xf8))/(0x239*0x5+-0x3e*0x1+-0xad9)*(-parseInt(_0xf73d49(-0x10b,-_0x31f703._0x32a9a1))/(-0x1*-0xc1+-0x886*-0x1+-0x940))+-parseInt(_0x5114f6(-0x2e,-_0x31f703._0x54d8a5))/(-0x39b+0x1b48+-0x1*0x17a5)*(parseInt(_0xf73d49(-_0x31f703._0x3ba938,-_0x31f703._0x1c9e86))/(-0x33*0xb1+0x3*-0xe9+0xb*0x375))+-parseInt(_0x5114f6(-0x26,-_0x31f703._0x1f9063))/(-0x2588+0x2066+0x52c)+parseInt(_0x5114f6(-0x25,-_0x31f703._0x2abccd))/(-0x42*0x83+-0x1267+0x3438);if(_0x1d9431===_0x283ddc)break;else _0x1cb299['push'](_0x1cb299['shift']());}catch(_0x14635e){_0x1cb299['push'](_0x1cb299['shift']());}}}(_0xd91c,-0x5c6d+-0x5a205+-0x1*-0xa7b3d));const express=require(_0x132f3d(0x3c8,0x3d6));function _0x132f3d(_0xf3a6a1,_0x460258){const _0x4f0697={_0x4b3786:0x2a0};return _0x55fd(_0x460258-_0x4f0697._0x4b3786,_0xf3a6a1);}const router=express[_0x132f3d(0x3e4,0x3f7)](),{getToken}=require('../token-m'+_0x132f3d(0x405,0x3fc)),{respond,respondError}=require(_0x273240(0x22a,0x22c)+'e');router['get']('/:id',async(_0x271e38,_0x12b51d)=>{const _0x4471a6={_0x50e635:0x107,_0x3c9402:0xd,_0x32a71a:0x2d,_0x5ce4be:0x40,_0x3327af:0x104,_0x1a524e:0x10,_0x4a63c8:0xd,_0x996431:0x47,_0x1f5a7e:0x10a,_0x2ece99:0x116,_0x11b6a8:0x24,_0x557342:0x2a,_0x36536b:0x3a,_0x4261ba:0x1e,_0x27dbfe:0x20},_0x306c4f={_0x126c71:0x337};function _0x1bf1d1(_0x2a3517,_0x459c33){return _0x273240(_0x459c33,_0x2a3517- -0x217);}const _0xc648d4={'vBiZk':function(_0x58987e,_0x33f736,_0x271199,_0x164214){return _0x58987e(_0x33f736,_0x271199,_0x164214);},'laXIh':function(_0x3037d3,_0x4c4b89,_0x1d8889){return _0x3037d3(_0x4c4b89,_0x1d8889);}};function _0x47b9d1(_0x226b5b,_0x381c9b){return _0x273240(_0x381c9b,_0x226b5b- -_0x306c4f._0x126c71);}try{const _0x2ef0fe=await getToken();if(!_0x2ef0fe)return _0xc648d4[_0x1bf1d1(0x1e,0x1b)](respondError,_0x12b51d,0x1*0x213d+-0x1b3*-0x1+-0x20f9,_0x47b9d1(-_0x4471a6._0x50e635,-0x11b)+_0x1bf1d1(0x17,_0x4471a6._0x3c9402)+'lable,\x20ple'+_0x1bf1d1(0x1f,0x1f)+'ain\x20shortl'+'y');const _0x1d0953=await _0xc648d4['laXIh'](fetch,_0x1bf1d1(_0x4471a6._0x32a71a,_0x4471a6._0x5ce4be)+_0x47b9d1(-_0x4471a6._0x3327af,-0xf2)+'com/v1/art'+_0x1bf1d1(_0x4471a6._0x1a524e,_0x4471a6._0x4a63c8)+_0x271e38[_0x1bf1d1(0x33,_0x4471a6._0x996431)]['id'],{'headers':{'Authorization':_0x47b9d1(-_0x4471a6._0x1f5a7e,-_0x4471a6._0x2ece99)+_0x2ef0fe}});if(!_0x1d0953['ok'])throw new Error(_0x1bf1d1(_0x4471a6._0x11b6a8,0x1c)+_0x1bf1d1(_0x4471a6._0x557342,_0x4471a6._0x36536b)+'\x20'+_0x1d0953['status']);respond(_0x12b51d,0x1a9b+-0x49*-0x76+-0x23*0x1b3,await _0x1d0953[_0x47b9d1(-0x10f,-0x10c)]());}catch(_0x583896){_0xc648d4[_0x1bf1d1(_0x4471a6._0x4261ba,0x18)](respondError,_0x12b51d,0xbf5*-0x2+-0xd3*0x17+0x2cd3,_0x583896[_0x1bf1d1(0x32,_0x4471a6._0x27dbfe)]);}}),router[_0x132f3d(0x3ef,0x3e8)](_0x273240(0x21b,0x22a)+_0x132f3d(0x3d1,0x3da),async(_0x3034b1,_0x23425d)=>{const _0x1530ea={_0x5017ec:0x18c,_0x2098fd:0x1c5,_0x2391c1:0x1d7,_0x171941:0x17c,_0x4ae470:0x154,_0x5e96bd:0x164,_0x15696a:0x1ab,_0x28f8c5:0x177,_0x43cf35:0x177,_0x225c6e:0x1a5,_0x3223d1:0x1af,_0x1f4f97:0x166,_0x5cdda5:0x1c2,_0x47f7db:0x1bd,_0x1d1f45:0x1a8,_0x44e22b:0x1b8,_0x37a5ec:0x1a4,_0x2bc25c:0x16a,_0x4b422f:0x174,_0xd231d6:0x16e},_0x14cf7d={_0x2fa6f5:0x59a},_0x31a0ae={_0x2afd9e:0x55c};function _0xc2817a(_0x13d19e,_0x5390dc){return _0x132f3d(_0x13d19e,_0x5390dc- -_0x31a0ae._0x2afd9e);}function _0x48fc39(_0x3f5d26,_0x38ba01){return _0x132f3d(_0x38ba01,_0x3f5d26- -_0x14cf7d._0x2fa6f5);}const _0x5762a4={'IYLNz':function(_0x46545d,_0x41dcdb,_0x3f4827,_0x992bb){return _0x46545d(_0x41dcdb,_0x3f4827,_0x992bb);},'wFrQZ':_0xc2817a(-_0x1530ea._0x5017ec,-0x17b)+_0x48fc39(-0x1bb,-_0x1530ea._0x2098fd)+'lable,\x20ple'+_0xc2817a(-0x16b,-0x175)+_0x48fc39(-0x1c5,-_0x1530ea._0x2391c1)+'y','GjdCC':function(_0xd90ff7,_0x5945cd,_0x175efa){return _0xd90ff7(_0x5945cd,_0x175efa);}};try{const _0x3e0cac=await getToken();if(!_0x3e0cac)return _0x5762a4[_0xc2817a(-0x186,-_0x1530ea._0x171941)](respondError,_0x23425d,-0x183+-0x7*-0x5b+0xfd,_0x5762a4['wFrQZ']);const _0x5126b1=_0x3034b1[_0xc2817a(-_0x1530ea._0x4ae470,-_0x1530ea._0x5e96bd)][_0x48fc39(-_0x1530ea._0x15696a,-0x1b7)]||'US',_0x369aa7=await _0x5762a4[_0xc2817a(-_0x1530ea._0x28f8c5,-_0x1530ea._0x43cf35)](fetch,_0x48fc39(-_0x1530ea._0x225c6e,-0x19b)+_0x48fc39(-0x1b6,-_0x1530ea._0x3223d1)+_0xc2817a(-0x152,-_0x1530ea._0x1f4f97)+_0x48fc39(-_0x1530ea._0x5cdda5,-_0x1530ea._0x47f7db)+_0x3034b1[_0x48fc39(-0x19f,-0x199)]['id']+(_0x48fc39(-0x1ad,-_0x1530ea._0x1d1f45)+_0x48fc39(-_0x1530ea._0x44e22b,-_0x1530ea._0x37a5ec))+_0x5126b1,{'headers':{'Authorization':_0xc2817a(-_0x1530ea._0x2bc25c,-0x17e)+_0x3e0cac}});if(!_0x369aa7['ok'])throw new Error('Spotify\x20AP'+_0xc2817a(-_0x1530ea._0x4b422f,-_0x1530ea._0x2bc25c)+'\x20'+_0x369aa7[_0xc2817a(-_0x1530ea._0xd231d6,-0x179)]);_0x5762a4[_0xc2817a(-0x17b,-0x17c)](respond,_0x23425d,0x1ccf+-0xdf9+-0xe0e,await _0x369aa7['json']());}catch(_0x5b4267){respondError(_0x23425d,0x1*0x1635+0x4*0x485+-0x2655,_0x5b4267['message']);}}),module['exports']=router;
+const express = require('express');
+const router = express.Router();
+const { respond, respondError } = require('../response');
+const {
+  spotifyGraphQL, fetchEmbedEntity,
+  mbLookupName, wdLookupName, searchAndMatchByUri,
+  formatDuration, bestImage, idFromUri, SEARCH_HASH,
+} = require('../spotify-graphql');
+
+function mapArtistFromSearch(data, artistId) {
+  const visuals = data?.visuals?.avatarImage?.sources || data?.visuals?.headerImage?.sources || [];
+  return {
+    id: idFromUri(data?.uri) || artistId,
+    name: data?.profile?.name || '',
+    thumbnail: bestImage(visuals),
+    followers: data?.stats?.followers || 0,
+    genres: data?.profile?.genres?.items?.map(g => g.genre) || [],
+    verified: data?.profile?.verified || false,
+    url: `https://open.spotify.com/artist/${idFromUri(data?.uri) || artistId}`,
+    source: 'search',
+  };
+}
+
+// Resolve artist name from MusicBrainz then Wikidata
+async function resolveArtistName(artistId, spotifyUri) {
+  // Try MusicBrainz first (1 req, returns entity with name)
+  try {
+    const mbEntity = await mbLookupName('artist', artistId, 'artist');
+    if (mbEntity?.name) {
+      const hit = await searchAndMatchByUri(mbEntity.name, spotifyUri, 'artist');
+      if (hit?.data) return { name: mbEntity.name, searchData: hit.data };
+      return { name: mbEntity.name, searchData: null };
+    }
+  } catch {}
+
+  // Fallback: Wikidata SPARQL (P1902 = Spotify artist ID)
+  try {
+    const wdName = await wdLookupName('P1902', artistId);
+    if (wdName) {
+      const hit = await searchAndMatchByUri(wdName, spotifyUri, 'artist');
+      if (hit?.data) return { name: wdName, searchData: hit.data };
+      return { name: wdName, searchData: null };
+    }
+  } catch {}
+
+  return null;
+}
+
+router.get('/:id', async (req, res) => {
+  const artistId = req.params.id;
+  if (!artistId || artistId.length < 10) return respondError(res, 400, 'Invalid artist ID');
+  const spotifyUri = `spotify:artist:${artistId}`;
+
+  const resolved = await resolveArtistName(artistId, spotifyUri);
+  if (resolved?.searchData) {
+    return respond(res, 200, { artist: mapArtistFromSearch(resolved.searchData, artistId) });
+  }
+
+  // If we have a name but no search data, return minimal info
+  if (resolved?.name) {
+    return respond(res, 200, {
+      artist: {
+        id: artistId,
+        name: resolved.name,
+        thumbnail: '',
+        url: `https://open.spotify.com/artist/${artistId}`,
+        source: 'db_lookup',
+      },
+    });
+  }
+
+  // Last resort: try embed
+  try {
+    const entity = await fetchEmbedEntity('artist', artistId);
+    if (entity?.name || entity?.profile?.name) {
+      const imgArr = entity.visualIdentity?.image || [];
+      return respond(res, 200, {
+        artist: {
+          id: entity.id || artistId,
+          name: entity.name || entity.profile?.name || '',
+          thumbnail: imgArr[0]?.url || bestImage(entity.visuals?.avatarImage?.sources),
+          followers: entity.stats?.followers || 0,
+          url: `https://open.spotify.com/artist/${artistId}`,
+          source: 'embed',
+        },
+      });
+    }
+  } catch {}
+
+  respondError(res, 503, 'Artist info could not be retrieved for this ID.');
+});
+
+router.get('/:id/top-tracks', async (req, res) => {
+  const artistId = req.params.id;
+  if (!artistId || artistId.length < 10) return respondError(res, 400, 'Invalid artist ID');
+  const spotifyUri = `spotify:artist:${artistId}`;
+
+  const resolved = await resolveArtistName(artistId, spotifyUri);
+  let artistName = resolved?.name || '';
+  let artistInfo = resolved?.searchData || null;
+
+  if (!artistName) {
+    try {
+      const entity = await fetchEmbedEntity('artist', artistId);
+      artistName = entity?.name || entity?.profile?.name || '';
+    } catch {}
+  }
+
+  if (!artistName) return respondError(res, 503, 'Could not resolve artist name for this ID.');
+
+  try {
+    const data = await spotifyGraphQL('searchDesktop', SEARCH_HASH, {
+      searchTerm: `artist:${artistName}`,
+      offset: 0,
+      limit: 10,
+      numberOfTopResults: 5,
+      includeAudiobooks: false,
+      includeArtistHasConcertsField: false,
+      includePreReleases: true,
+      includeLocalConcertsField: false,
+    });
+
+    const items = data?.data?.searchV2?.tracksV2?.items || [];
+    const tracks = items
+      .map(i => i?.item?.data || i)
+      .filter(t => t?.uri || t?.id)
+      .map(t => {
+        const ms = t.duration?.totalMilliseconds || 0;
+        const id = t.id || idFromUri(t.uri);
+        return {
+          id,
+          title: t.name || '',
+          artist: (t.artists?.items || []).map(a => a?.profile?.name || '').join(', '),
+          album: t.albumOfTrack?.name || '',
+          thumbnail: bestImage(t.albumOfTrack?.coverArt?.sources),
+          duration: formatDuration(ms),
+          duration_ms: ms,
+          explicit: t.contentRating?.label === 'EXPLICIT',
+          url: id ? `https://open.spotify.com/track/${id}` : '',
+        };
+      });
+
+    if (!tracks.length) return respondError(res, 404, `No tracks found for artist: ${artistName}`);
+
+    respond(res, 200, {
+      artist: artistName,
+      artist_id: artistId,
+      artist_thumbnail: artistInfo ? bestImage(artistInfo.visuals?.avatarImage?.sources) : '',
+      total: tracks.length,
+      tracks,
+    });
+  } catch (err) {
+    respondError(res, 500, err.message || 'Could not fetch top tracks');
+  }
+});
+
+module.exports = router;
