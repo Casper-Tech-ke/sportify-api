@@ -6,7 +6,7 @@
 [![Status](https://img.shields.io/badge/Status-Live-brightgreen)](https://sportify.xcasper.space)
 [![Built by](https://img.shields.io/badge/Built%20by-TRABY%20CASPER-7c3aed)](https://xcasper.space)
 [![CASPER TECH](https://img.shields.io/badge/CASPER%20TECH-Open%20API-a855f7)](https://xcasper.space)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/Casper-Tech-ke/sportify-api/releases/tag/v1.0.0)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/Casper-Tech-ke/sportify-api/releases/tag/v1.1.0)
 
 **Live API:** [https://sportify.xcasper.space](https://sportify.xcasper.space)
 
