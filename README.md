@@ -53,6 +53,7 @@ CASPER TECH is a Kenyan tech initiative building free, accessible developer tool
 | GET | `/api/playlist/:id` | Playlist info, owner, followers and all tracks |
 | GET | `/api/artist/:id` | Artist profile, genres and metadata |
 | GET | `/api/artist/:id/top-tracks` | Artist top tracks |
+| GET | `/api/lyrics/:id` | Timed (synced) lyrics for a track by Spotify ID |
 
 ---
 
@@ -78,6 +79,9 @@ curl "https://sportify.xcasper.space/api/artist/7vk5e3vY1uw9plTHJAMwjN/top-track
 
 # Get a playlist (RapCaviar)
 curl "https://sportify.xcasper.space/api/playlist/37i9dQZF1DX0XUsuxWHRQd"
+
+# Get timed lyrics for a track (Faded - Alan Walker)
+curl "https://sportify.xcasper.space/api/lyrics/7gHs73wELdeycvS48JfIos"
 ```
 
 ---
@@ -281,6 +285,7 @@ sportify-api/
 │       ├── album.js          - GET /api/album/:id
 │       ├── artist.js         - GET /api/artist/:id and /top-tracks
 │       ├── playlist.js       - GET /api/playlist/:id
+│       ├── lyrics.js         - GET /api/lyrics/:id
 │       └── search.js         - GET /api/search
 ├── public/
 │   ├── index.html            - Interactive API documentation page
